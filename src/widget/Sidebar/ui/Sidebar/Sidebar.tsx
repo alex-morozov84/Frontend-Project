@@ -55,7 +55,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             to={RouterPath.about}
             className={cls.item}
           >
-            <MainIcon className={cls.icon} />
+            <AboutIcon className={cls.icon} />
             <span className={cls.link}>
               {t('О сайте')}
             </span>
