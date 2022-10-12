@@ -11,5 +11,7 @@
   "Главная": "Main",
   "О сайте": "About",
   "Войти": "Enter",
-  "increment": "increment"
+  "increment": "increment",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password"
 }
