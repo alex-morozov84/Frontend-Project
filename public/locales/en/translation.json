@@ -13,5 +13,8 @@
   "Войти": "Enter",
   "increment": "increment",
   "Введите username": "Enter username",
-  "Введите пароль": "Enter password"
+  "Введите пароль": "Enter password",
+  "Форма авторизации": "Auth form",
+  "Неверный логин или пароль": "Wrong login/pass",
+  "Выйти": "Exit"
 }
