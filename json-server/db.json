@@ -46,6 +46,13 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Александр",
+    "lastname": "Морозов",
+    "age": 38,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint-Petersburg",
+    "username": "admin",
+    "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
   }
 }
