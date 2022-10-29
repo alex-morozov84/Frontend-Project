@@ -3,11 +3,15 @@ import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import {
   fetchProfileData,
-  getProfileData,
-  getProfileError, getProfileForm,
-  getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions,
+  getProfileError,
+  getProfileForm,
+  getProfileIsLoading,
+  getProfileReadonly,
+  getProfileValidateErrors,
+  profileActions,
   ProfileCard,
-  profileReducer, ValidateProfileError,
+  profileReducer,
+  ValidateProfileError,
 } from 'entities/Profile';
 import { useCallback, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
