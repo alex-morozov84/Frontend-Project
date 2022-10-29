@@ -17,5 +17,7 @@
   "Форма авторизации": "Auth form",
   "Неверный логин или пароль": "Wrong login/pass",
   "Выйти": "Exit",
-  "PROFILE PAGE": "PROFILE PAGE"
+  "PROFILE PAGE": "PROFILE PAGE",
+  "Укажите валюту": "Set currency",
+  "Укажите страну": "Set country"
 }

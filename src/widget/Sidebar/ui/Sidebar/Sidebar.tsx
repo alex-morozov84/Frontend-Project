@@ -1,5 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import React, { memo, useState } from 'react';
+import React, { memo, useMemo, useState } from 'react';
 import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/ui/Button';
@@ -18,6 +18,14 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
     setCollapsed((prev) => !prev);
   };
 
+  const itemsList = useMemo(() => SidebarItemsList.map((item) => (
+    <SidebarItem
+      item={item}
+      collapsed={collapsed}
+      key={item.path}
+    />
+  )), [collapsed]);
+
   return (
     <div
       data-testid="sidebar"
@@ -34,13 +42,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
       <div className={cls.items}>
-        {SidebarItemsList.map((item) => (
-          <SidebarItem
-            item={item}
-            collapsed={collapsed}
-            key={item.path}
-          />
-        ))}
+        {itemsList}
       </div>
       <div className={cls.switchers}>
         <ThemeSwitcher />
