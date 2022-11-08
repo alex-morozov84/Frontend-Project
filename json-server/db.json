@@ -39,7 +39,9 @@
       "img": "https://fuzeservers.ru/wp-content/uploads/9/3/a/93a14a817aba78c219b6421198863989.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -120,6 +122,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "dfhdfhdfhd",
+      "id": "ySeARff"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "ergergerg",
+      "id": "mlljDnz"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "gesdfs",
+      "id": "EqNH3ss"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "111111",
+      "id": "pGtkH6F"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "dshfdjsdjt",
+      "id": "mIdW95h"
     }
   ],
   "users": [
@@ -135,17 +167,31 @@
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
+      "avatar": "https://ustaliy.ru/wp-content/uploads/2021/04/test-chto-vy-znaete-o-dzhone-lennone-scaled.jpeg"
     }
   ],
-  "profile": {
-    "first": "Александр",
-    "lastname": "Морозов",
-    "age": 38,
-    "currency": "EUR",
-    "country": "Armenia",
-    "city": "Saint-Petersburg",
-    "username": "admin",
-    "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "Александр",
+      "lastname": "Морозов",
+      "age": 38,
+      "currency": "EUR",
+      "country": "Armenia",
+      "city": "Saint-Petersburg",
+      "username": "admin",
+      "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
+    },
+    {
+      "id": "2",
+      "first": "Джон1",
+      "lastname": "Леннон",
+      "age": 48,
+      "currency": "USD",
+      "country": "Ukraine",
+      "city": "Kiev",
+      "username": "JLen",
+      "avatar": "https://ustaliy.ru/wp-content/uploads/2021/04/test-chto-vy-znaete-o-dzhone-lennone-scaled.jpeg"
+    }
+  ]
 }
