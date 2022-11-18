@@ -46,7 +46,7 @@ export const Page = memo((props: PageProps) => {
       position: e.currentTarget.scrollTop,
       path: pathname,
     }));
-  }, 5000);
+  }, 500);
 
   return (
     <section
@@ -55,7 +55,7 @@ export const Page = memo((props: PageProps) => {
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
     </section>
   );
 });
