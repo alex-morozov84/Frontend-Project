@@ -2,6 +2,7 @@ import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Select } from 'shared/ui/Select/Select';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { ListBox } from 'shared/ui/ListBox/ListBox';
 import { Country } from '../../model/types/сountry';
 
 interface CountrySelectProps {
@@ -29,13 +30,14 @@ export const CountrySelect = memo(({
   }, [onChange]);
 
   return (
-    <Select
-      className={classNames('', {}, [className])}
+    <ListBox
+      items={options}
+      defaultValue={t('Укажите страну')}
       label={t('Укажите страну')}
-      options={options}
+      readonly={readonly}
       value={value}
       onChange={onChangeHandler}
-      readonly={readonly}
+      direction="top"
     />
   );
 });
