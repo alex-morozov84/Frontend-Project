@@ -3,8 +3,8 @@ import { Currency } from 'entities/Currency';
 import {
   profileActions, profileReducer,
 } from '../slice/profileSlice';
-import { ProfileSchema, ValidateProfileError } from '../types/profile';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
+import { ProfileSchema, ValidateProfileError } from '../types/editableProfileCardSchema';
 
 const data = {
   username: 'admin',

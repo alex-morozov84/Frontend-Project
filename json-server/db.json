@@ -615,6 +615,18 @@
       "userId": "1",
       "text": "fgjfgj",
       "id": "7uB3t2p"
+    },
+    {
+      "articleId": "10",
+      "userId": "1",
+      "text": "sdfsdfsd",
+      "id": "j0zxRm7"
+    },
+    {
+      "articleId": "10",
+      "userId": "1",
+      "text": "gdhsdhsrjhtr",
+      "id": "r8lxAlu"
     }
   ],
   "users": [
@@ -636,11 +648,11 @@
   "profile": [
     {
       "id": "1",
-      "first": "Александр",
-      "lastname": "Морозов",
+      "first": "Александр1",
+      "lastname": "Морозов2",
       "age": 38,
       "currency": "EUR",
-      "country": "Armenia",
+      "country": "Kazakhstan",
       "city": "Saint-Petersburg",
       "username": "admin",
       "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
