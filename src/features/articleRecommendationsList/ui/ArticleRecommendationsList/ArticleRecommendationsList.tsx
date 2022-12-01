@@ -7,14 +7,13 @@ import { VStack } from 'shared/ui/Stack';
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi';
 
 interface ArticleRecommendationsListProps {
-    className?: string;
+  className?: string;
 }
 
 export const ArticleRecommendationsList = memo((props: ArticleRecommendationsListProps) => {
   const { className } = props;
   const { t } = useTranslation();
-
-  const { data: articles, isLoading, error } = useArticleRecommendationsList(3);
+  const { isLoading, data: articles, error } = useArticleRecommendationsList(3);
 
   if (isLoading || error || !articles) {
     return null;
