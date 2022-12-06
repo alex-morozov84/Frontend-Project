@@ -39,6 +39,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'warn',
     'no-underscore-dangle': 'off',
+    'react/no-array-index-key': 'off',
     'max-len': ['error', { code: 140, ignoreComments: true }],
     'i18next/no-literal-string': ['error', {
       markupOnly: true,

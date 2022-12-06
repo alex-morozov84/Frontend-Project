@@ -8,7 +8,6 @@ const MainPage = () => {
   return (
     <Page>
       {t('Главная')}
-
     </Page>
   );
 };
