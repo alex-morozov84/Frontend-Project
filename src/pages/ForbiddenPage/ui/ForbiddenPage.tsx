@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Page } from 'widget/Page/Page';
+import { Page } from '@/widget/Page/Page';
 
 const ForbiddenPage = () => {
   const { t } = useTranslation();
