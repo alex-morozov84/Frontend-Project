@@ -60,7 +60,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'no-param-reassign': 'off',
     'no-undef': 'off',
-    'path-checker/path-checker': 'error',
+    'path-checker/path-checker': ['error', { alias: '@' }],
   },
   globals: {
     __IS_DEV__: true,
