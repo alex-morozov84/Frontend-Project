@@ -4,8 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { AppRouter } from '@/app/providers/router';
 import { Navbar } from '@/widget/Navbar';
 import { Sidebar } from '@/widget/Sidebar';
-import { userActions } from '@/entities/User';
-import { getUserInited } from '@/entities/User/model/selectors/getUserInited/getUserInited';
+import { userActions, getUserInited } from '@/entities/User';
 
 function App() {
   const dispatch = useDispatch();
