@@ -37,7 +37,14 @@ module.exports = {
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'import/extensions': 'off',
-    'import/no-extraneous-dependencies': 'warn',
+    'import/no-extraneous-dependencies': [
+      'warn',
+      {
+        devDependencies: [
+          '**/*.stories.tsx',
+        ],
+      },
+    ],
     'no-underscore-dangle': 'off',
     'react/no-array-index-key': 'off',
     'max-len': ['error', { code: 140, ignoreComments: true }],
