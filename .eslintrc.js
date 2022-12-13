@@ -61,6 +61,13 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'path-checker/path-checker': ['error', { alias: '@' }],
+    'path-checker/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+      },
+    ],
     'path-checker/public-api-imports': [
       'error',
       {
