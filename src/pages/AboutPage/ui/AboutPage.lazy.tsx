@@ -1,3 +1,3 @@
-import { FC, lazy } from 'react';
+import { lazy } from 'react';
 
 export const AboutPageLazy = lazy(() => import('./AboutPage'));

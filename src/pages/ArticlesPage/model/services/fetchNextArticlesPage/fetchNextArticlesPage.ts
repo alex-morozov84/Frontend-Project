@@ -3,7 +3,6 @@ import { ThunkConfig } from '@/app/providers/StoreProvider';
 import {
   getArticlesPageHasMore,
   getArticlesPageIsLoading,
-  getArticlesPageLimit,
   getArticlesPageNum,
 } from '../../selectors/articlePageSelectors';
 import { articlesPageActions } from '../../slices/articlesPageSlice';
