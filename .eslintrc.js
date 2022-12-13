@@ -61,7 +61,13 @@ module.exports = {
     'no-param-reassign': 'off',
     'no-undef': 'off',
     'path-checker/path-checker': ['error', { alias: '@' }],
-    'path-checker/public-api-imports': ['error', { alias: '@' }],
+    'path-checker/public-api-imports': [
+      'error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+      },
+    ],
   },
   globals: {
     __IS_DEV__: true,
