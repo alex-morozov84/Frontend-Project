@@ -24,9 +24,11 @@ module.exports = {
     'i18next',
     'react-hooks',
     'path-checker',
+    'unused-imports',
   ],
   rules: {
     'react/jsx-indent': [2, 2],
+    'unused-imports/no-unused-imports': 'error',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
