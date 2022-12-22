@@ -28,6 +28,7 @@
   },
   "include": [
     "./config/jest/*.ts",
+    "./config/storybook/*.ts",
     "./src/**/*.tsx",
     "./src/**/*.ts"
   ]

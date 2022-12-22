@@ -4,12 +4,7 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-    'plugin:i18next/recommended',
-
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:i18next/recommended', 'plugin:storybook/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -18,18 +13,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'i18next',
-    'react-hooks',
-    'path-checker',
-    'unused-imports',
-  ],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks', 'path-checker', 'unused-imports'],
   rules: {
     'react/jsx-indent': [2, 2],
     'unused-imports/no-unused-imports': 'error',
-    'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+    'react/jsx-filename-extension': [2, {
+      extensions: ['.js', '.jsx', '.tsx'],
+    }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'warn',
@@ -39,22 +29,18 @@ module.exports = {
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
     'import/extensions': 'off',
-    'import/no-extraneous-dependencies': [
-      'warn',
-      {
-        devDependencies: [
-          '**/*.stories.tsx',
-        ],
-      },
-    ],
+    'import/no-extraneous-dependencies': ['warn', {
+      devDependencies: ['**/*.stories.tsx'],
+    }],
     'no-underscore-dangle': 'off',
     'react/no-array-index-key': 'off',
-    'max-len': ['error', { code: 140, ignoreComments: true }],
+    'max-len': ['error', {
+      code: 140,
+      ignoreComments: true,
+    }],
     'i18next/no-literal-string': ['error', {
       markupOnly: true,
-      ignoreAttribute: [
-        'data-testid', 'to', 'target', 'align', 'direction', 'gap', 'justify', 'role', 'as', 'border',
-      ],
+      ignoreAttribute: ['data-testid', 'to', 'target', 'align', 'direction', 'gap', 'justify', 'role', 'as', 'border'],
     }],
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
@@ -62,34 +48,28 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'no-param-reassign': 'off',
     'no-undef': 'off',
-    'path-checker/path-checker': ['error', { alias: '@' }],
-    'path-checker/layer-imports': [
-      'error',
-      {
-        alias: '@',
-        ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
-      },
-    ],
-    'path-checker/public-api-imports': [
-      'error',
-      {
-        alias: '@',
-        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
-      },
-    ],
+    'path-checker/path-checker': ['error', {
+      alias: '@',
+    }],
+    'path-checker/layer-imports': ['error', {
+      alias: '@',
+      ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+    }],
+    'path-checker/public-api-imports': ['error', {
+      alias: '@',
+      testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+    }],
   },
   globals: {
     __IS_DEV__: true,
     __API__: true,
     __PROJECT__: true,
   },
-  overrides: [
-    {
-      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
-      rules: {
-        'i18next/no-literal-string': 'off',
-        'max-len': 'off',
-      },
+  overrides: [{
+    files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off',
+      'max-len': 'off',
     },
-  ],
+  }],
 };
