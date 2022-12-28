@@ -1,5 +1,5 @@
-import { rtkApi } from '@/shared/api/rtkApi';
-import { Rating } from '@/entities/Rating';
+import { rtkApi } from '@/shared/api/rtkApi'
+import { Rating } from '@/entities/Rating'
 
 interface GetArticleRatingArg {
   userId: string
@@ -32,7 +32,7 @@ const articleRatingApi = rtkApi.injectEndpoints({
       }),
     }),
   }),
-});
+})
 
-export const useGetArticleRating = articleRatingApi.useGetArticleRatingQuery;
-export const useRateArticle = articleRatingApi.useRateArticleMutation;
+export const useGetArticleRating = articleRatingApi.useGetArticleRatingQuery
+export const useRateArticle = articleRatingApi.useRateArticleMutation

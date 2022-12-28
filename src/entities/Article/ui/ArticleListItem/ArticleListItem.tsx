@@ -1,22 +1,20 @@
-import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, memo } from 'react';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { Text } from '@/shared/ui/Text';
-import { Icon } from '@/shared/ui/Icon';
-import EyeIcon from '@/shared/assets/icons/eye-20-20.svg';
-import { Card } from '@/shared/ui/Card';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Button, ButtonTheme } from '@/shared/ui/Button';
-import { AppLink } from '@/shared/ui/AppLink';
-import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts';
-import {
-  Article, ArticleTextBlock,
-} from '../../model/types/article';
-import cls from './ArticleListItem.module.scss';
-import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
-import { getRouteArticleDetails } from '@/shared/const/router';
-import { AppImage } from '@/shared/ui/AppImage';
-import { Skeleton } from '@/shared/ui/Skeleton';
+import { useTranslation } from 'react-i18next'
+import { HTMLAttributeAnchorTarget, memo } from 'react'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Text } from '@/shared/ui/Text'
+import { Icon } from '@/shared/ui/Icon'
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
+import { Card } from '@/shared/ui/Card'
+import { Avatar } from '@/shared/ui/Avatar'
+import { Button, ButtonTheme } from '@/shared/ui/Button'
+import { AppLink } from '@/shared/ui/AppLink'
+import { ArticleBlockType, ArticleView } from '../../model/consts/articleConsts'
+import { Article, ArticleTextBlock } from '../../model/types/article'
+import cls from './ArticleListItem.module.scss'
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
+import { getRouteArticleDetails } from '@/shared/const/router'
+import { AppImage } from '@/shared/ui/AppImage'
+import { Skeleton } from '@/shared/ui/Skeleton'
 
 interface ArticleListItemProps {
   className?: string
@@ -26,26 +24,21 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-  const {
-    view,
-    article,
-    className,
-    target,
-  } = props;
-  const { t } = useTranslation();
+  const { view, article, className, target } = props
+  const { t } = useTranslation()
 
-  const types = <Text text={article.type.join(', ')} className={cls.types} />;
+  const types = <Text text={article.type.join(', ')} className={cls.types} />
   const views = (
     <>
       <Text text={String(article.views)} className={cls.views} />
       <Icon Svg={EyeIcon} />
     </>
-  );
+  )
 
   if (view === ArticleView.BIG) {
     const textBlock = article.blocks.find(
       (block) => block.type === ArticleBlockType.TEXT,
-    ) as ArticleTextBlock;
+    ) as ArticleTextBlock
 
     return (
       <div
@@ -66,29 +59,21 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
             alt={article.title}
             className={cls.img}
           />
-          {textBlock
-            && (
-              <ArticleTextBlockComponent
-                className={cls.textBlock}
-                block={textBlock}
-              />
-            )}
+          {textBlock && (
+            <ArticleTextBlockComponent
+              className={cls.textBlock}
+              block={textBlock}
+            />
+          )}
           <div className={cls.footer}>
-            <AppLink
-              target={target}
-              to={getRouteArticleDetails(article.id)}
-            >
-              <Button
-                theme={ButtonTheme.OUTLINE}
-              >
-                {t('Читать далее')}
-              </Button>
+            <AppLink target={target} to={getRouteArticleDetails(article.id)}>
+              <Button theme={ButtonTheme.OUTLINE}>{t('Читать далее')}</Button>
             </AppLink>
             {views}
           </div>
         </Card>
       </div>
-    );
+    )
   }
 
   return (
@@ -115,5 +100,5 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         <Text text={article.title} className={cls.title} />
       </Card>
     </AppLink>
-  );
-});
+  )
+})

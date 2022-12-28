@@ -6,9 +6,7 @@
   "views": 10222,
   "createdAt": "26.02.2020",
   "userId": "1",
-  "type": [
-    "IT"
-  ],
+  "type": ["IT"],
   "blocks": [
     {
       "id": "1",
@@ -25,9 +23,7 @@
     "id": "1",
     "username": "admin",
     "password": "123",
-    "roles": [
-      "ADMIN"
-    ],
+    "roles": ["ADMIN"],
     "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
   }
 }

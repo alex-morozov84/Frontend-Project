@@ -1,20 +1,26 @@
-import { MainPage } from '@/pages/MainPage';
-import { AboutPage } from '@/pages/AboutPage';
-import { ProfilePage } from '@/pages/ProfilePage';
-import { ArticlesPage } from '@/pages/ArticlesPage';
-import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage';
-import { ArticleEditPage } from '@/pages/ArticleEditPage';
-import { AdminPanelPage } from '@/pages/AdminPanelPage';
-import { UserRole } from '@/entities/User';
-import { ForbiddenPage } from '@/pages/ForbiddenPage';
-import { NotFoundPage } from '@/pages/NotFoundPage';
+import { MainPage } from '@/pages/MainPage'
+import { AboutPage } from '@/pages/AboutPage'
+import { ProfilePage } from '@/pages/ProfilePage'
+import { ArticlesPage } from '@/pages/ArticlesPage'
+import { ArticleDetailsPage } from '@/pages/ArticleDetailsPage'
+import { ArticleEditPage } from '@/pages/ArticleEditPage'
+import { AdminPanelPage } from '@/pages/AdminPanelPage'
+import { UserRole } from '@/entities/User'
+import { ForbiddenPage } from '@/pages/ForbiddenPage'
+import { NotFoundPage } from '@/pages/NotFoundPage'
 import {
   AppRoutes,
-  getRouteAbout, getRouteAdminPanel, getRouteArticleCreate,
-  getRouteArticleDetails, getRouteArticleEdit, getRouteArticles,
-  getRouteForbiddenPage, getRouteMain, getRouteProfile,
-} from '@/shared/const/router';
-import { AppRouteProps } from '@/shared/types/router';
+  getRouteAbout,
+  getRouteAdminPanel,
+  getRouteArticleCreate,
+  getRouteArticleDetails,
+  getRouteArticleEdit,
+  getRouteArticles,
+  getRouteForbiddenPage,
+  getRouteMain,
+  getRouteProfile,
+} from '@/shared/const/router'
+import { AppRouteProps } from '@/shared/types/router'
 
 export const routeConfig: Record<AppRoutes, AppRouteProps> = {
   [AppRoutes.MAIN]: {
@@ -64,4 +70,4 @@ export const routeConfig: Record<AppRoutes, AppRouteProps> = {
     path: '*',
     element: <NotFoundPage />,
   },
-};
+}

@@ -1,14 +1,14 @@
-import { useTranslation } from 'react-i18next';
-import { classNames, Mods } from '@/shared/lib/classNames/classNames';
-import { Text, TextAlign, TextTheme } from '@/shared/ui/Text';
-import { Input } from '@/shared/ui/Input';
-import { Loader } from '@/shared/ui/Loader';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Currency, CurrencySelect } from '@/entities/Currency';
-import { CountrySelect, Country } from '@/entities/Country';
-import { HStack, VStack } from '@/shared/ui/Stack';
-import { Profile } from '../../model/types/profile';
-import cls from './ProfileCard.module.scss';
+import { useTranslation } from 'react-i18next'
+import { classNames, Mods } from '@/shared/lib/classNames/classNames'
+import { Text, TextAlign, TextTheme } from '@/shared/ui/Text'
+import { Input } from '@/shared/ui/Input'
+import { Loader } from '@/shared/ui/Loader'
+import { Avatar } from '@/shared/ui/Avatar'
+import { Currency, CurrencySelect } from '@/entities/Currency'
+import { CountrySelect, Country } from '@/entities/Country'
+import { HStack, VStack } from '@/shared/ui/Stack'
+import { Profile } from '../../model/types/profile'
+import cls from './ProfileCard.module.scss'
 
 interface ProfileCardProps {
   className?: string
@@ -41,21 +41,31 @@ export const ProfileCard = (props: ProfileCardProps) => {
     onChangeAvatar,
     onChangeCurrency,
     onChangeCountry,
-  } = props;
+  } = props
 
-  const { t } = useTranslation('profile');
+  const { t } = useTranslation('profile')
 
   if (isLoading) {
     return (
-      <HStack justify="center" max className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+      <HStack
+        justify="center"
+        max
+        className={classNames(cls.ProfileCard, { [cls.loading]: true }, [
+          className,
+        ])}
+      >
         <Loader />
       </HStack>
-    );
+    )
   }
 
   if (error) {
     return (
-      <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
+      <HStack
+        justify="center"
+        max
+        className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+      >
         <Text
           theme={TextTheme.ERROR}
           title={t('Произошла ошибка')}
@@ -63,22 +73,25 @@ export const ProfileCard = (props: ProfileCardProps) => {
           align={TextAlign.CENTER}
         />
       </HStack>
-    );
+    )
   }
 
   const mods: Mods = {
     [cls.editing]: !readonly,
-  };
+  }
 
   return (
-    <VStack gap="8" max className={classNames(cls.ProfileCard, mods, [className])}>
-      {data?.avatar
-            && (
-            <HStack justify="center" max className={cls.avatarWrapper}>
-              {/* eslint-disable-next-line i18next/no-literal-string */}
-              <Avatar src={data?.avatar} alt="avatar" />
-            </HStack>
-            )}
+    <VStack
+      gap="8"
+      max
+      className={classNames(cls.ProfileCard, mods, [className])}
+    >
+      {data?.avatar && (
+        <HStack justify="center" max className={cls.avatarWrapper}>
+          {/* eslint-disable-next-line i18next/no-literal-string */}
+          <Avatar src={data?.avatar} alt="avatar" />
+        </HStack>
+      )}
       <Input
         value={data?.first}
         placeholder={t('Ваше имя')}
@@ -136,5 +149,5 @@ export const ProfileCard = (props: ProfileCardProps) => {
         readonly={readonly}
       />
     </VStack>
-  );
-};
+  )
+}

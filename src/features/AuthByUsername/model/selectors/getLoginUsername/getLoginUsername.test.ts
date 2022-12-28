@@ -1,5 +1,5 @@
-import { StateSchema } from '@/app/providers/StoreProvider';
-import { getLoginUsername } from './getLoginUsername';
+import { StateSchema } from '@/app/providers/StoreProvider'
+import { getLoginUsername } from './getLoginUsername'
 
 describe('getLoginUsername.test', () => {
   test('should return admin', () => {
@@ -7,11 +7,11 @@ describe('getLoginUsername.test', () => {
       loginForm: {
         username: 'admin',
       },
-    };
-    expect(getLoginUsername(state as StateSchema)).toEqual('admin');
-  });
+    }
+    expect(getLoginUsername(state as StateSchema)).toEqual('admin')
+  })
   test('should work with empty state', () => {
-    const state: DeepPartial<StateSchema> = {};
-    expect(getLoginUsername(state as StateSchema)).toEqual('');
-  });
-});
+    const state: DeepPartial<StateSchema> = {}
+    expect(getLoginUsername(state as StateSchema)).toEqual('')
+  })
+})

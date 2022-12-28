@@ -1,4 +1,4 @@
-import { Article } from '../../../src/entities/Article';
+import { Article } from '../../../src/entities/Article'
 
 const defaultArticle = {
   id: '21',
@@ -8,11 +8,9 @@ const defaultArticle = {
   views: 1022,
   createdAt: '26.02.2022',
   userId: '1',
-  type: [
-    'SCIENCE',
-  ],
+  type: ['SCIENCE'],
   blocks: [],
-};
+}
 
 export const createArticle = (article?: Article) => {
   cy.request({
@@ -20,16 +18,16 @@ export const createArticle = (article?: Article) => {
     url: 'http://localhost:8000/articles',
     headers: { Authorization: 'sdfsd' },
     body: article ?? defaultArticle,
-  }).then((resp) => resp.body);
-};
+  }).then((resp) => resp.body)
+}
 
 export const removeArticle = (articleId: string) => {
   cy.request({
     method: 'DELETE',
     url: `http://localhost:8000/articles/${articleId}`,
     headers: { Authorization: 'sdfsd' },
-  });
-};
+  })
+}
 
 declare global {
   namespace Cypress {

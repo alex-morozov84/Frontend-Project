@@ -1,17 +1,13 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ArticleViewSelectorSchema } from '../types/ArticleViewSelectorSchema';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { ArticleViewSelectorSchema } from '../types/ArticleViewSelectorSchema'
 
-const initialState: ArticleViewSelectorSchema = {
-
-};
+const initialState: ArticleViewSelectorSchema = {}
 
 export const ArticleViewSelectorSlice = createSlice({
   name: 'ArticleViewSelector',
   initialState,
   reducers: {
-    template: (state, action: PayloadAction<string>) => {
-
-    },
+    template: (state, action: PayloadAction<string>) => {},
   },
   // extraReducers: (builder) => {
   //     builder
@@ -27,7 +23,7 @@ export const ArticleViewSelectorSlice = createSlice({
   //             state.error = action.payload;
   //         });
   // },
-});
+})
 
-export const { actions: ArticleViewSelectorActions } = ArticleViewSelectorSlice;
-export const { reducer: ArticleViewSelectorReducer } = ArticleViewSelectorSlice;
+export const { actions: ArticleViewSelectorActions } = ArticleViewSelectorSlice
+export const { reducer: ArticleViewSelectorReducer } = ArticleViewSelectorSlice

@@ -3,22 +3,17 @@
  * https://jestjs.io/docs/configuration
  */
 
-import path from 'path';
+import path from 'path'
 
 export default {
   // An array of regexp pattern strings used to skip coverage collection
-  coveragePathIgnorePatterns: [
-    '\\\\node_modules\\\\',
-  ],
+  coveragePathIgnorePatterns: ['\\\\node_modules\\\\'],
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
 
   // An array of directory names to be searched recursively up from the requiring module's location
-  moduleDirectories: [
-    'node_modules',
-    'src',
-  ],
+  moduleDirectories: ['node_modules', 'src'],
 
   // An array of file extensions your modules use
   moduleFileExtensions: [
@@ -38,9 +33,7 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
 
   // The glob patterns Jest uses to detect test files
-  testMatch: [
-    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
-  ],
+  testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
@@ -57,12 +50,15 @@ export default {
 
   reporters: [
     'default',
-    ['jest-html-reporters', {
-      publicPath: '<rootDir>/reports/unit',
-      filename: 'report.html',
-      // openReport: true,
-      inlineSource: true,
-    }],
+    [
+      'jest-html-reporters',
+      {
+        publicPath: '<rootDir>/reports/unit',
+        filename: 'report.html',
+        // openReport: true,
+        inlineSource: true,
+      },
+    ],
   ],
 
   // All imported modules in your tests should be mocked automatically
@@ -216,4 +212,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}

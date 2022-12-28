@@ -1,9 +1,9 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleDetailsPage } from './ArticleDetailsPage';
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { ArticleDetailsPage } from './ArticleDetailsPage'
 
 export default {
   title: 'pages/ArticleDetailsPage/ArticleDetailsPage',
@@ -11,9 +11,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ArticleDetailsPage>;
+} as ComponentMeta<typeof ArticleDetailsPage>
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
+const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => (
+  <ArticleDetailsPage {...args} />
+)
 
 const article: Article = {
   id: '1',
@@ -26,7 +28,8 @@ const article: Article = {
   user: {
     id: '1',
     username: 'Alex',
-    avatar: 'https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg',
+    avatar:
+      'https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg',
   },
   blocks: [
     {
@@ -88,12 +91,14 @@ const article: Article = {
       ],
     },
   ],
-};
+}
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({
-  articleDetails: {
-    data: article,
-  },
-})];
+export const Normal = Template.bind({})
+Normal.args = {}
+Normal.decorators = [
+  StoreDecorator({
+    articleDetails: {
+      data: article,
+    },
+  }),
+]

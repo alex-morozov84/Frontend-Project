@@ -1,10 +1,10 @@
-import React from 'react';
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import React from 'react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import { NotFoundPage } from './NotFoundPage';
-import { Theme } from '@/shared/const/theme';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import { NotFoundPage } from './NotFoundPage'
+import { Theme } from '@/shared/const/theme'
 
 export default {
   title: 'pages/NotFoundPage',
@@ -12,16 +12,16 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof NotFoundPage>;
+} as ComponentMeta<typeof NotFoundPage>
 
-const Template: ComponentStory<typeof NotFoundPage> = (args) => <NotFoundPage {...args} />;
+const Template: ComponentStory<typeof NotFoundPage> = (args) => (
+  <NotFoundPage {...args} />
+)
 
-export const Normal = Template.bind({});
-Normal.args = {
-};
-Normal.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+export const Normal = Template.bind({})
+Normal.args = {}
+Normal.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]
 
-export const Dark = Template.bind({});
-Dark.args = {
-};
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
+export const Dark = Template.bind({})
+Dark.args = {}
+Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})]

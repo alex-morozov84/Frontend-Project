@@ -1,8 +1,8 @@
-import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Article, ArticleBlockType, ArticleType } from '@/entities/Article';
-import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticlesPage from './ArticlesPage';
+import React from 'react'
+import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { Article, ArticleBlockType, ArticleType } from '@/entities/Article'
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
+import ArticlesPage from './ArticlesPage'
 
 export default {
   title: 'pages/ArticlesPage/ArticlesPage',
@@ -10,9 +10,11 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ArticlesPage>;
+} as ComponentMeta<typeof ArticlesPage>
 
-const Template: ComponentStory<typeof ArticlesPage> = (args) => <ArticlesPage {...args} />;
+const Template: ComponentStory<typeof ArticlesPage> = (args) => (
+  <ArticlesPage {...args} />
+)
 
 const article: Article = {
   id: '1',
@@ -86,8 +88,8 @@ const article: Article = {
       ],
     },
   ],
-};
+}
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({})];
+export const Normal = Template.bind({})
+Normal.args = {}
+Normal.decorators = [StoreDecorator({})]

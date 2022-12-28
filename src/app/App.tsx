@@ -1,21 +1,21 @@
-import React, { Suspense, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { classNames } from '@/shared/lib/classNames/classNames';
-import { AppRouter } from './providers/router';
-import { Navbar } from '@/widget/Navbar';
-import { Sidebar } from '@/widget/Sidebar';
-import { userActions, getUserInited } from '@/entities/User';
-import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
+import React, { Suspense, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { AppRouter } from './providers/router'
+import { Navbar } from '@/widget/Navbar'
+import { Sidebar } from '@/widget/Sidebar'
+import { userActions, getUserInited } from '@/entities/User'
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
 
 function App() {
-  const { theme } = useTheme();
-  const dispatch = useDispatch();
+  const { theme } = useTheme()
+  const dispatch = useDispatch()
 
-  const inited = useSelector(getUserInited);
+  const inited = useSelector(getUserInited)
 
   useEffect(() => {
-    dispatch(userActions.initAuthData());
-  }, [dispatch]);
+    dispatch(userActions.initAuthData())
+  }, [dispatch])
 
   return (
     <div className={classNames('app', {}, [theme])}>
@@ -27,7 +27,7 @@ function App() {
         </div>
       </Suspense>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
