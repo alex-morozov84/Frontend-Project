@@ -2,6 +2,7 @@ const fs = require('fs')
 const jsonServer = require('json-server')
 const path = require('path')
 const https = require('https')
+const http = require('http')
 
 const options = {
   key: fs.readFileSync(path.resolve(__dirname, 'key.pem')),
@@ -59,15 +60,17 @@ server.use((req, res, next) => {
 
 server.use(router)
 
-// запуск сервера
-// http
-// server.listen(8000, () => {
-//   console.log('server is running on 8000 port')
-// })
-
-// https
+// запуск сервера. Создано два сервера. Одни для разработки, второй для запуска не сервере (описание созадния второго - у 121 уроке)
 const PORT = 8443
+const HTTP_PORT = 8000
+
 const httpsServer = https.createServer(options, server)
-httpsServer.listen(8443, () => {
+const httpServer = http.createServer(server)
+
+server.listen(HTTP_PORT, () => {
+  console.log(`server is running on ${HTTP_PORT} port`)
+})
+
+httpsServer.listen(PORT, () => {
   console.log(`server is running on ${PORT} port`)
 })
