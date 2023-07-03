@@ -659,6 +659,10 @@
       "username": "admin",
       "password": "123",
       "roles": ["ADMIN"],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://fikiwiki.com/uploads/posts/2022-02/1644988636_34-fikiwiki-com-p-krutie-kartinki-dlya-vk-34.jpg"
     },
     {
@@ -666,6 +670,10 @@
       "username": "user",
       "password": "123",
       "roles": ["USER"],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
       "avatar": "https://ustaliy.ru/wp-content/uploads/2021/04/test-chto-vy-znaete-o-dzhone-lennone-scaled.jpeg"
     },
     {
@@ -673,6 +681,10 @@
       "username": "manager",
       "password": "123",
       "roles": ["MANAGER"],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
       "avatar": "https://ustaliy.ru/wp-content/uploads/2021/04/test-chto-vy-znaete-o-dzhone-lennone-scaled.jpeg"
     },
     {
