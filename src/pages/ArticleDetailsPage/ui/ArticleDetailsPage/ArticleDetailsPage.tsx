@@ -15,8 +15,8 @@ import { articleDetailsPageReducer } from '../../model/slices'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { ArticleRating } from '@/features/articleRating'
-import { getFeatureFlags } from '@/shared/lib/features'
-import { Counter } from '@/entities/Counter'
+import { toggleFeatures } from '@/shared/lib/features'
+import { Card } from '@/shared/ui/Card'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -29,13 +29,16 @@ const reducers: ReducersList = {
 export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
   const { t } = useTranslation('article')
   const { id } = useParams<{ id: string }>()
-  const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled')
-  const isCounterEnabled = getFeatureFlags('isCounterEnabled')
-  console.log(isArticleRatingEnabled)
 
   if (!id) {
     return null
   }
+
+  const articleRatingCard = toggleFeatures({
+    name: 'isCounterEnabled',
+    on: () => <ArticleRating articleId={id} />,
+    off: () => <Card>{t('Оценка статей скоро появится')}</Card>,
+  })
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
@@ -43,8 +46,7 @@ export const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
         <VStack gap="16" max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          {isArticleRatingEnabled && <ArticleRating articleId={id} />}
-          {isCounterEnabled && <Counter />}
+          {articleRatingCard}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
