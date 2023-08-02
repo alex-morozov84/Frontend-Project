@@ -16,6 +16,13 @@
   background: var(--bg-color);
 }
 
+.app_redesigned {
+  min-height: 100vh;
+  background: var(--bg-redesigned);
+  font: var(--font-m-redesigned);
+  color: var(--text-redesigned);
+}
+
 .content-page {
   display: flex;
 }
