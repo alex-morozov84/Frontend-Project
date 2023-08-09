@@ -14,7 +14,7 @@ import cls from './ArticleListItem.module.scss'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import { getRouteArticleDetails } from '@/shared/const/router'
 import { AppImage } from '@/shared/ui/AppImage'
-import { Skeleton } from '@/shared/ui/Skeleton'
+import {Skeleton} from "@/shared/ui/Skeleton";
 
 interface ArticleListItemProps {
   className?: string
