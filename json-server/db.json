@@ -727,7 +727,11 @@
         "isArticleRatingEnabled": false,
         "isCounterEnabled": false
       },
-      "avatar": "https://ustaliy.ru/wp-content/uploads/2021/04/test-chto-vy-znaete-o-dzhone-lennone-scaled.jpeg"
+      "avatar": "https://ustaliy.ru/wp-content/uploads/2021/04/test-chto-vy-znaete-o-dzhone-lennone-scaled.jpeg",
+      "jsonSettings": {
+        "isArticlePageWasOpened": true,
+        "theme": "app_orange_theme"
+      }
     },
     {
       "id": "3",
