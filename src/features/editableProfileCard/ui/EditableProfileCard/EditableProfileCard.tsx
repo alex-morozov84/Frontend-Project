@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
-import { Text, TextTheme } from '@/shared/ui/Text'
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
 import { ProfileCard } from '@/entities/Profile'
 import {
   DynamicModuleLoader,
