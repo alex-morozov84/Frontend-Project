@@ -6,7 +6,7 @@ import { Button, ButtonTheme } from '@/shared/ui/deprecated/Button'
 import { LoginModal } from '@/features/AuthByUsername'
 import { getUserAuthData } from '@/entities/User'
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
-import { AppLink, AppLinkTheme } from '@/shared/ui/deprecated/AppLink'
+import { AppLink } from '@/shared/ui/redesigned/AppLink'
 import { HStack } from '@/shared/ui/Stack'
 import { NotificationButton } from '@/features/notificationButton'
 import { AvatarDropdown } from '@/features/avatarDropdown'
@@ -54,7 +54,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
             />
             <AppLink
               to={getRouteArticleCreate()}
-              theme={AppLinkTheme.SECONDARY}
+              variant='red'
               className={cls.createBtn}
             >
               {t('Создать статью')}
