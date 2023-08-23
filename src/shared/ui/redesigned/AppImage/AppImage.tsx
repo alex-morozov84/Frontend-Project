@@ -12,10 +12,6 @@ interface AppImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   errorFallback?: ReactElement
 }
 
-/**
- * Устарел, используем новые компоненты из папки redesigned
- * @deprecated
- */
 export const AppImage = memo((props: AppImageProps) => {
   const {
     className,

@@ -9,7 +9,7 @@ import {
   DynamicModuleLoader,
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
-import { HStack } from '@/shared/ui/Stack'
+import { HStack } from '@/shared/ui/redesigned/Stack'
 import {
   addCommentFormActions,
   addCommentFormReducer,

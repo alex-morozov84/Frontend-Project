@@ -3,7 +3,7 @@ import { memo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Text, TextSize } from '@/shared/ui/deprecated/Text'
 import { ArticleList } from '@/entities/Article'
-import { VStack } from '@/shared/ui/Stack'
+import { VStack } from '@/shared/ui/redesigned/Stack'
 import { useArticleRecommendationsList } from '../../api/articleRecommendationsApi'
 
 interface ArticleRecommendationsListProps {

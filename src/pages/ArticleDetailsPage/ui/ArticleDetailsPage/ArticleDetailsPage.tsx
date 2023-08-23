@@ -8,7 +8,7 @@ import {
   ReducersList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { Page } from '@/widget/Page'
-import { VStack } from '@/shared/ui/Stack'
+import { VStack } from '@/shared/ui/redesigned/Stack'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
 import { articleDetailsPageReducer } from '../../model/slices'
