@@ -23,7 +23,8 @@ const project = new Project({})
 // Поиск во всех файлах
 // project.addSourceFilesAtPaths('src/**/*.ts')
 // Либо в конкретном файле
-project.addSourceFilesAtPaths('src/**/ArticleDetailsPage.tsx')
+project.addSourceFilesAtPaths('src/**/*.tsx')
+project.addSourceFilesAtPaths('src/**/*.ts')
 
 const files = project.getSourceFiles()
 
@@ -135,10 +136,11 @@ const replaceComponent = (node: Node) => {
 }
 
 files.forEach((sourceFile) => {
+  // eslint-disable-next-line consistent-return
   sourceFile.forEachDescendant((node) => {
     // Если нашли требуемую ноду
     if (node.isKind(SyntaxKind.CallExpression) && isToggleFunction(node)) {
-      replaceToggleFunction(node)
+      return replaceToggleFunction(node)
     }
 
     // Если нашли требуемую ноду
@@ -146,7 +148,7 @@ files.forEach((sourceFile) => {
       node.isKind(SyntaxKind.JsxSelfClosingElement) &&
       isToggleComponent(node)
     ) {
-      replaceComponent(node)
+      return replaceComponent(node)
     }
   })
 })

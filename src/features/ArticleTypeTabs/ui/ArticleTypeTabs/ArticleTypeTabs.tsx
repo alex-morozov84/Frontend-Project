@@ -1,8 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { memo, useCallback, useMemo } from 'react'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { TabItem, Tabs } from '@/shared/ui/deprecated/Tabs'
+import { TabItem, Tabs  as TabsDeprecated} from '@/shared/ui/deprecated/Tabs'
 import { ArticleType } from '@/entities/Article'
+import {ToggleFeatures} from "@/shared/lib/features";
+import {Tabs} from "@/shared/ui/redesigned/Tabs";
 
 interface ArticleTypeTabsProps {
   className?: string
@@ -18,7 +20,7 @@ export const ArticleTypeTabs = memo(
       () => [
         {
           value: ArticleType.ALL,
-          content: t('Все'),
+          content: t('Все статьи'),
         },
         {
           value: ArticleType.IT,
@@ -44,11 +46,25 @@ export const ArticleTypeTabs = memo(
     )
 
     return (
-      <Tabs
-        tabs={typeTabs}
-        value={value}
-        onTabClick={onTabClick}
-        className={classNames('', {}, [className])}
+      <ToggleFeatures
+        feature='isAppRedesigned'
+        on={
+          <Tabs
+            tabs={typeTabs}
+            value={value}
+            onTabClick={onTabClick}
+            className={classNames('', {}, [className])}
+            direction='column'
+          />
+        }
+        off={
+          <TabsDeprecated
+            tabs={typeTabs}
+            value={value}
+            onTabClick={onTabClick}
+            className={classNames('', {}, [className])}
+          />
+        }
       />
     )
   },
