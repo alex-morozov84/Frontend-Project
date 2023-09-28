@@ -8,6 +8,18 @@
   width: 100%;
 }
 
+.s {
+  height: 32px;
+}
+
+.m {
+  height: 38px;
+}
+
+.l {
+  height: 44px;
+}
+
 .addonLeft, .addonRight {
   display: flex;
 }
@@ -33,7 +45,6 @@
   outline: none;
   width: 100%;
   color: var(--text-redesigned);
-  text-shadow: 0 0 0 var(--primary-color);
   background: none;
 
   &::placeholder {
