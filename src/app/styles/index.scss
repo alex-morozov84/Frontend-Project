@@ -4,14 +4,9 @@
 @import "./themes/dark";
 @import "./themes/orange";
 
-.app,
-.app_modal,
-.app_drawer {
+.app {
   font: var(--font-m);
   color: var(--primary-color);
-}
-
-.app {
   min-height: 100vh;
   background: var(--bg-color);
 }

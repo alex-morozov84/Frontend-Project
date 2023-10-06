@@ -7,7 +7,6 @@
   opacity: 0;
   pointer-events: none;
   z-index: -1;
-  color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +28,18 @@
   transition: 0.3s transform;
   transform: scale(0.5);
   max-width: 60%;
+}
+
+.modalNew {
+  .content {
+    background: var(--light-bg-redesigned);
+  }
+}
+
+.modalOld {
+  .content {
+    background: var(--bg-color);
+  }
 }
 
 .opened {
