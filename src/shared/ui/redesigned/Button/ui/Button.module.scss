@@ -5,13 +5,13 @@
   display: flex;
   align-items: center;
 
-  &:hover {
-    color: var(--accent-redesigned);
-
-    .addonLeft svg, .addonRight svg {
-      color: var(--accent-redesigned)
-    }
-  }
+  //&:hover {
+  //  color: var(--accent-redesigned);
+  //
+  //  .addonLeft svg, .addonRight svg {
+  //    color: var(--accent-redesigned)
+  //  }
+  //}
 }
 
 .withAddon {
@@ -41,12 +41,31 @@
 }
 
 .outline {
-  border: 2px solid var(--icon-redesigned);
   background: none;
   border-radius: 34px;
 
-  &:hover {
-    border: 2px solid var(--accent-redesigned);
+  &.normal {
+    border: 2px solid var(--icon-redesigned);
+
+    &:hover {
+      border: 2px solid var(--accent-redesigned);
+    }
+  }
+
+  &.error {
+    border: 2px solid var(--cancel-redesigned);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.success {
+    border: 2px solid var(--save-redesigned);
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 

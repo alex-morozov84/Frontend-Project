@@ -74,8 +74,9 @@ export const ProfileCardRedesigned = memo((props: ProfileCardProps) => {
       padding='24'
       max
       className={className}
+      border='partial'
     >
-      <VStack gap='32'>
+      <VStack gap='16'>
         {data?.avatar && (
           <HStack justify="center" max >
             {/* eslint-disable-next-line i18next/no-literal-string */}
