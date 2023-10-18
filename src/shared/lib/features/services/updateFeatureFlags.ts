@@ -2,7 +2,7 @@ import {createAsyncThunk} from "@reduxjs/toolkit";
 import {FeatureFlags} from "@/shared/types/featureFlags";
 import {ThunkConfig} from "@/app/providers/StoreProvider";
 import {updateFeatureFlagsMutation} from '../api/featureFlagsApi';
-import {getAllFeatureFlags} from '../lib/setGetFeatures';
+import {getAllFeatureFlags, setFeatureFlag} from '../lib/setGetFeatures';
 
 interface UpdateFeatureFlagsOptions {
   userId: string
@@ -17,19 +17,24 @@ export const updateFeatureFlags = createAsyncThunk<
   >( 'user/saveJsonSettings', async ({userId, newFeatures}, thunkApi) => {
     const {rejectWithValue, dispatch} = thunkApi
 
+  const allFeatures = {
+    ...getAllFeatureFlags(),
+    ...newFeatures
+  }
+
   try {
       await dispatch(
         updateFeatureFlagsMutation({
           userId,
-          features: {
-            ...getAllFeatureFlags(),
-            ...newFeatures
-          }
+          features: allFeatures
         })
       )
 
+    setFeatureFlag(allFeatures)
+
     // Hack!! Т.к. фичи не хранятся в стейте, то при изменении флага в клиенте, отправляем новое состояние на сервер и жёстко перезагружаем страницу. Так лучше не делать, но в принципе можно, т.к. в реальных проектах фичи не меняются в рамках одной сессии
-    window.location.reload()
+    // Позднее вместо этого использовали ForceUpdate Provider (урок 148)
+    // window.location.reload()
     return
   } catch (e) {
     console.log(e)
